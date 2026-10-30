@@ -23,6 +23,13 @@
     <button class="nav-burger" aria-label="Buka menu" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-label="Ganti tema: otomatis, terang, gelap">
+        <svg class="ic-auto" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/></svg>
+        <svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html" aria-current="page">Beranda</a></li>
       <li><a href="index.html#layanan">Layanan</a></li>
@@ -63,31 +70,44 @@
   </div>
 </section>
 
-<!-- ===== SHOWCASE ASIMETRIS ===== -->
+<!-- ===== SHOWCASE: carousel foto asli ===== -->
 <section class="wrap">
   <div class="showcase">
-    <!-- Foto asli proyek otomasi: panel PLC, HMI + aplikasi monitoring, app Android-nya -->
-    <figure class="sh-card sh-8 reveal">
-      <img src="img-show/otomasi-show1.jpeg" alt="Panel kontrol PLC otomasi industri" loading="lazy">
-      <img src="img-show/otomasi-show2.jpeg" alt="HMI mesin dengan aplikasi monitoring di ponsel" loading="lazy">
-      <img src="img-show/android-show.jpeg" alt="Aplikasi Android monitoring mesin" loading="lazy">
-      <figcaption class="sh-caption"><strong>Otomasi Industri &amp; IoT</strong>Panel PLC, HMI mesin, dan aplikasi monitoringnya: dari wiring sampai dashboard operator, semuanya kami yang rakit dan tulis.</figcaption>
-    </figure>
-    <!-- Tangkapan layar asli (adb screencap, orientasi potret) dari tablet kami -->
-    <figure class="sh-card sh-4 reveal">
-      <img src="assets/img/showcase-tablet.png" alt="Dashboard Klinik.Net orientasi potret di tablet" loading="lazy">
-      <figcaption class="sh-caption"><strong>Aplikasi Tablet</strong>Tangkapan layar asli dari tablet, orientasi potret: susunan kartu menyesuaikan sendiri. Data tersimpan di perangkat; tanpa sinyal pun aplikasi jalan.</figcaption>
-    </figure>
-    <!-- Foto asli armada PT Klinik Net Rent Car -->
-    <figure class="sh-card sh-5 reveal">
-      <img src="image-rent-car/img1.jpeg" alt="Armada PT Klinik Net Rent Car" loading="lazy">
-      <figcaption class="sh-caption"><strong>Armada Rent Car</strong>Serah terima unit ke driver. Armada kami tidak besar; tiap mobil punya riwayat biaya sendiri.</figcaption>
-    </figure>
-    <!-- Foto asli: tablet operasional menjalankan Klinik.Net -->
-    <figure class="sh-card sh-7 reveal">
-      <img src="img-show/tablet-show.jpeg" alt="Tablet menjalankan aplikasi Klinik.Net, layar Mobil" loading="lazy">
-      <figcaption class="sh-caption"><strong>Klinik.Net — dibuat &amp; dipakai sendiri</strong>Pencatat keuangan rental kami sendiri, difoto dari tablet operasional: layar Mobil, 11 armada, status sewa dan tarif harian. Layar yang memang kami pakai tiap hari, bukan gambar contoh.</figcaption>
-    </figure>
+    <div class="carousel reveal" aria-roledescription="carousel" aria-label="Foto proyek dan armada">
+      <div class="car-track">
+        <figure class="car-slide">
+          <img src="img-show/otomasi-show1.jpeg" alt="Panel kontrol PLC otomasi industri" loading="lazy">
+          <figcaption class="sh-caption"><strong>Otomasi Industri &amp; IoT</strong>Panel PLC yang kami rakit sendiri: dari gambar wiring sampai commissioning di lokasi.</figcaption>
+        </figure>
+        <figure class="car-slide">
+          <img src="img-show/otomasi-show2.jpeg" alt="HMI mesin dengan aplikasi monitoring di ponsel" loading="lazy">
+          <figcaption class="sh-caption"><strong>HMI &amp; Monitoring</strong>Layar HMI mesin berdampingan dengan aplikasi monitoringnya di ponsel: data produksi terbaca real-time.</figcaption>
+        </figure>
+        <figure class="car-slide">
+          <img src="img-show/android-show.jpeg" alt="Aplikasi Android monitoring mesin" loading="lazy">
+          <figcaption class="sh-caption"><strong>Aplikasi Monitoring</strong>Dashboard mesin di Android: status unit, counter produksi, dan ketersediaan lintas shift.</figcaption>
+        </figure>
+        <figure class="car-slide">
+          <img src="assets/img/showcase-tablet.png" alt="Dashboard Klinik.Net orientasi potret di tablet" loading="lazy">
+          <figcaption class="sh-caption"><strong>Aplikasi Tablet</strong>Tangkapan layar asli dari tablet, orientasi potret: susunan kartu menyesuaikan sendiri. Data tersimpan di perangkat; tanpa sinyal pun aplikasi jalan.</figcaption>
+        </figure>
+        <figure class="car-slide">
+          <img src="img-show/tablet-show.jpeg" alt="Tablet menjalankan aplikasi Klinik.Net, layar Mobil" loading="lazy">
+          <figcaption class="sh-caption"><strong>Klinik.Net — dibuat &amp; dipakai sendiri</strong>Pencatat keuangan rental kami sendiri, difoto dari tablet operasional: layar Mobil, 11 armada, status sewa dan tarif harian.</figcaption>
+        </figure>
+        <figure class="car-slide">
+          <img src="image-rent-car/img1.jpeg" alt="Armada PT Klinik Net Rent Car" loading="lazy">
+          <figcaption class="sh-caption"><strong>Armada Rent Car</strong>Serah terima unit ke driver. Armada kami tidak besar; tiap mobil punya riwayat biaya sendiri.</figcaption>
+        </figure>
+      </div>
+      <div class="car-ctl">
+        <div class="car-btns">
+          <button class="car-btn" type="button" data-dir="-1" aria-label="Foto sebelumnya"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg></button>
+          <button class="car-btn" type="button" data-dir="1" aria-label="Foto berikutnya"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+        </div>
+        <div class="car-dots" role="tablist" aria-label="Pilih foto"></div>
+      </div>
+    </div>
   </div>
 </section>
 
