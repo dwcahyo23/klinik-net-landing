@@ -252,10 +252,13 @@ a { color: inherit; }
   display: block;
   font-family: "Clash Display", system-ui, sans-serif;
   font-size: 18px;
-  letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 4px;
 }
+/* ponytail: tracking display (-0.05em) hanya terbaca di huruf besar; heading
+   kecil (pilar, kartu layanan, judul legal, caption) dilonggarkan + line-height
+   dinaikkan supaya tidak bertabrakan saat wrapping. */
+h3, .article h2, .sh-caption strong { letter-spacing: -0.01em; line-height: 1.2; }
 
 /* ===== Layanan ===== */
 .services { padding: 96px 0; }
