@@ -14,6 +14,24 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  // Counter [data-count]: animasi 0 → N sekali saat elemen terlihat.
+  document.querySelectorAll("[data-count]").forEach(function (el) {
+    var n = Number(el.dataset.count);
+    var run = function () {
+      var t0 = performance.now();
+      (function step(t) {
+        var p = Math.min(1, (t - t0) / 1200);
+        el.textContent = Math.round(n * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+    };
+    if (!("IntersectionObserver" in window)) { el.textContent = n; return; }
+    var o = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { o.disconnect(); run(); }
+    }, { threshold: 0.5 });
+    o.observe(el);
+  });
+
   var burger = document.querySelector(".nav-burger");
   var links = document.querySelector(".nav-links");
   if (burger && links) {
