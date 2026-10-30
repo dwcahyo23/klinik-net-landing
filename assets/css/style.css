@@ -436,6 +436,7 @@ h3, .article h2, .sh-caption strong { letter-spacing: -0.01em; line-height: 1.2;
 .rentcar-stat span { font-size: 15px; color: var(--panel-muted); line-height: 1.4; }
 .rentcar .eyebrow { color: var(--panel-dim); }
 .rentcar p { color: var(--panel-muted); margin-top: 20px; font-size: 16px; }
+.rentcar .btn-solid { background: var(--panel-ink); color: var(--panel); margin-top: 28px; }
 .rentcar-list {
   list-style: none;
   display: grid;
