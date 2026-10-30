@@ -1,0 +1,10 @@
+# artefak tooling sesi, bukan bagian situs
+.playwright-mcp/
+verify-*.png
+
+# placeholder lama & mentahan screenshot, tidak dirujuk halaman mana pun
+assets/img/showcase-industri.svg
+assets/img/showcase-tablet.svg
+assets/img/showcase-armada.svg
+assets/img/showcase-app.svg
+assets/img/tab-raw.png

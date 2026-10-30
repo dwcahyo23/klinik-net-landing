@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — PT Klinik Net</title>
+<meta name="description" content="Kebijakan privasi aplikasi Android Klinik.Net: data disimpan lokal di perangkat, tanpa server, tanpa analytics. Cadangan ke Google Drive hanya atas pilihan pengguna.">
+<link rel="canonical" href="https://kliniknet.my.id/privacy-policy.html">
+<meta property="og:title" content="Privacy Policy — Klinik.Net">
+<meta property="og:description" content="Aplikasi offline-first: data Anda tetap di perangkat Anda.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kliniknet.my.id/privacy-policy.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">KLINIK&nbsp;NET</a>
+    <button class="nav-burger" aria-label="Buka menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#layanan">Layanan</a></li>
+      <li><a href="index.html#rentcar">Rent Car</a></li>
+      <li><a href="index.html#tentang">Tentang</a></li>
+      <li><a class="nav-cta" href="index.html#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="article">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="effective">Aplikasi: Klinik.Net (paket <code>net.klinik.rental</code>) untuk Android · Berlaku sejak: 30 Oktober 2026</p>
+
+    <p>PT Klinik Net ("kami") mengembangkan aplikasi Android <strong>Klinik.Net</strong> ("Aplikasi"), yaitu pencatat keuangan rental mobil yang dijalankan pemilik usaha di tablet miliknya sendiri. Kebijakan ini menjelaskan data apa yang disimpan Aplikasi, di mana data itu berada, dan pilihan Anda atasnya.</p>
+
+    <h2>1. Ringkasan</h2>
+    <p class="note">Aplikasi bersifat <strong>offline-first</strong>. Seluruh data bisnis Anda disimpan di perangkat Anda sendiri. Kami tidak memiliki server, tidak mengumpulkan data ke pihak kami, dan tidak memasang analytics, pelacak (tracker), crash reporting, maupun iklan.</p>
+
+    <h2>2. Data yang Disimpan di Perangkat</h2>
+    <p>Semua data berikut disimpan dalam basis data SQLite lokal di direktori privat Aplikasi pada perangkat Anda:</p>
+    <ul>
+      <li><strong>Data kendaraan</strong>: nomor plat, merek, model, tahun, warna, tarif harian, harga dan tanggal beli, catatan, riwayat biaya (servis, pajak, perawatan).</li>
+      <li><strong>Data penyewa</strong>: nama, nomor telepon, nomor KTP dan foto KTP (opsional, diisi oleh Anda), nama dan nomor kontak darurat, nomor rekening, foto/avatar.</li>
+      <li><strong>Data kontrak sewa</strong>: tanggal mulai/selesai, tarif, masa jeda dan alasannya.</li>
+      <li><strong>Data transaksi</strong>: setoran (nominal, tanggal, metode, rekening tujuan, kode transaksi, catatan), koreksi dan pembatalan beserta alasannya, tunggakan.</li>
+      <li><strong>Data usaha Anda</strong>: rekening usaha, identitas usaha (nama, alamat, telepon).</li>
+      <li><strong>Data keamanan</strong>: PIN 4 angka (disimpan sebagai hash, bukan teks asli), hash kode pemulihan, status lisensi dan ID perangkat.</li>
+    </ul>
+    <p>Data penyewa (termasuk KTP dan foto KTP) adalah data yang <strong>Anda masukkan sendiri</strong> sebagai pemilik usaha. Anda bertanggung jawab memiliki dasar yang sah untuk mencatat data penyewa Anda, dan memberitahu mereka sesuai ketentuan yang berlaku (termasuk UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi).</p>
+
+    <h2>3. Izin yang Diminta Aplikasi</h2>
+    <ul>
+      <li><strong>INTERNET</strong> — satu-satunya izin yang kami deklarasikan, digunakan hanya untuk login Google dan pencadangan ke Google Drive (bagian 5). Aplikasi berfungsi penuh tanpa koneksi internet.</li>
+      <li>Izin tambahan dari pustaka sistem Android: WAKE_LOCK, ACCESS_NETWORK_STATE, RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE (penjadwalan pencadangan) dan USE_BIOMETRIC (konfirmasi login Google oleh sistem). Tidak ada izin penyimpanan/storage — Aplikasi hanya menulis ke direktori privatnya sendiri.</li>
+    </ul>
+
+    <h2>4. Keamanan Penyimpanan Lokal — Batas yang Jujur</h2>
+    <p>Kunci PIN adalah <strong>penghalang layar, bukan enkripsi</strong>. Berkas basis data itu sendiri tidak dienkripsi; ia berada di direktori privat Aplikasi yang dilindungi sandbox Android. Pada perangkat yang di-root atau dibuka paksa, data tersebut dapat dibaca. Pencadangan otomatis Android juga dinonaktifkan (<code>allowBackup=false</code>), sehingga data tidak ikut tersalin ke akun Google perangkat secara diam-diam.</p>
+
+    <h2>5. Pihak Ketiga — Hanya Atas Tindakan Anda</h2>
+    <p>Data hanya meninggalkan perangkat melalui tiga jalur, semuanya dimulai oleh tindakan Anda sendiri:</p>
+    <table>
+      <tr><th>Jalur</th><th>Data yang keluar</th><th>Kapan</th></tr>
+      <tr>
+        <td><strong>Login Google</strong> (Google Credential Manager)</td>
+        <td>Nama dan email akun Google Anda, untuk mengaktifkan fitur cadangan.</td>
+        <td>Hanya saat Anda menekan "Masuk dengan Google". Opsional.</td>
+      </tr>
+      <tr>
+        <td><strong>Google Drive</strong> (scope <code>drive.appdata</code>)</td>
+        <td>Satu berkas zip cadangan basis data (<code>klinik-net-backup.zip</code>, menimpa yang lama) ke folder tersembunyi milik Aplikasi di Drive akun Anda. Scope ini <em>tidak</em> memberi kami atau Aplikasi akses ke berkas Drive Anda yang lain.</td>
+        <td>Hanya setelah Anda login dan mencadangkan. Berkas cadangan tunduk pada kebijakan privasi Google.</td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp</strong> (tautan <code>wa.me</code>)</td>
+        <td>Fitur pengingat tunggakan membuka aplikasi WhatsApp Anda dengan nomor penyewa dan draf pesan terisi.</td>
+        <td>Hanya saat Anda menekan kirim pengingat. Pengiriman dilakukan oleh Anda di WhatsApp, bukan oleh Aplikasi. WhatsApp tunduk pada kebijakan privasinya sendiri.</td>
+      </tr>
+    </table>
+    <p>Ekspor CSV dan berkas cadangan lokal juga keluar perangkat hanya bila Anda memintanya, ke tujuan yang Anda pilih sendiri.</p>
+
+    <h2>6. Lisensi Aplikasi</h2>
+    <p>Aplikasi memakai lisensi per-tablet yang diverifikasi <strong>sepenuhnya offline</strong>. ID perangkat dibaca dari pengaturan sistem Android (<code>ANDROID_ID</code>) dan hanya dipakai untuk mencocokkan kode aktivasi di perangkat itu. ID perangkat tidak pernah dikirim ke server mana pun — tidak ada server kami.</p>
+
+    <h2>7. Yang TIDAK Kami Lakukan</h2>
+    <ul>
+      <li>Tidak ada server atau backend milik PT Klinik Net yang menerima data Anda.</li>
+      <li>Tidak ada analytics, crash reporting, iklan, atau SDK pelacak pihak ketiga.</li>
+      <li>Tidak ada penjualan atau pertukaran data.</li>
+      <li>Kami tidak dapat mengakses data di perangkat Anda maupun berkas cadangan di Drive Anda.</li>
+    </ul>
+
+    <h2>8. Hak dan Kendali Anda</h2>
+    <ul>
+      <li><strong>Menghapus semua data</strong>: hapus data Aplikasi atau uninstall — seluruh basis data lokal hilang permanen.</li>
+      <li><strong>Menghentikan cadangan Drive</strong>: keluar dari akun Google di dalam Aplikasi; berkas cadangan yang sudah ada tidak otomatis terhapus — hapus manual lewat Google Drive (folder data aplikasi).</li>
+      <li><strong>Memperbaiki/menghapus data penyewa</strong>: lewat layar Penyewa di Aplikasi.</li>
+      <li><strong>Mencabut izin login Google</strong>: lewat setelan akun Google Anda (Aplikasi dengan akses Drive).</li>
+    </ul>
+
+    <h2>9. Data Anak</h2>
+    <p>Aplikasi adalah alat bisnis untuk pemilik usaha rental dan tidak ditujukan untuk anak-anak.</p>
+
+    <h2>10. Perubahan Kebijakan</h2>
+    <p>Bila perilaku Aplikasi berubah, kebijakan ini diperbarui dan tanggal berlakunya diganti. Versi terbaru selalu tersedia di halaman ini.</p>
+
+    <h2>11. Kontak</h2>
+    <p>PT Klinik Net — Bumi Puspitek Asri Sektor 5, Pagedangan, Banten · Email: <a href="mailto:cs@kliniknet.my.id">cs@kliniknet.my.id</a> · Telepon: 0813-8071-7192 / 0821-2461-0363 · NIB: [ISI: NIB]</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">KLINIK NET</div>
+        <p>Konsultan &amp; system builder di Pagedangan, Tangerang. Website, aplikasi Android tablet, otomasi industri &amp; IoT, plus rental mobil yang menjalankan semua sistem itu tiap hari.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#layanan">Layanan</a></li>
+          <li><a href="index.html#rentcar">Rent Car</a></li>
+          <li><a href="index.html#tentang">Tentang</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul class="footer-contact">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Bumi Puspitek Asri Sektor 5, Pagedangan, Banten</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> <a href="mailto:cs@kliniknet.my.id">cs@kliniknet.my.id</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 2.9.7a2 2 0 0 1 1.7 2z"/></svg> <a href="tel:+6281380717192">0813-8071-7192</a> · <a href="tel:+6282124610363">0821-2461-0363</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PT Klinik Net. Seluruh hak cipta dilindungi.</span>
+      <span>kliniknet.my.id</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

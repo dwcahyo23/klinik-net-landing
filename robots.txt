@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kliniknet.my.id/sitemap.xml
